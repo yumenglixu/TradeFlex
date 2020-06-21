@@ -1,0 +1,407 @@
+/*
+* 公共视觉
+*
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+img { display: block; }
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight:normal;
+}
+
+/************************************** 主题样式开始 ******************************************/
+html, body{
+    height: 100%;
+    min-height: 100%;
+}
+a img {
+    border: none;
+}
+a {
+    text-decoration:none;
+    color:#444;
+}
+a:hover{
+    text-decoration:underline;
+}
+strong,b{
+    font-weight:bold;
+}
+i,em{
+    font-style:italic;
+}
+input,textarea,button,select{
+    font-size:12px;
+    font-family:"微软雅黑","Microsoft YaHei";
+    width:auto;
+    overflow:visible;
+}
+.clear{
+    clear:both;
+}
+.none{
+    display:none;
+}
+.clearfix:after { 
+content: "020"; 
+display: block; 
+height: 0; 
+clear: both; 
+visibility: hidden;
+}
+.clearfix { zoom:1; }
+.fl { float: left; }
+.fr { float: right; }
+a {
+    outline: none;
+}
+:focus { 
+    outline:0;
+}
+a:hover {
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    color: #888;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    background-color: #fdfdfd;
+    font-feature-settings: 'tnum';
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    clear: both;
+}
+.h2 {
+    font-size: 48px;
+    line-height: 56px;
+    color: #333;
+}
+.h4 {
+    font-size: 16px;
+    line-height: 25px;
+    color: #5C5C5C;
+}
+.mt64 {
+    margin-top: 64px;
+}
+.mt70 {
+    margin-top: 70px;
+}
+.mb50 {
+    margin-bottom: 50px;
+}
+.mb30 {
+    margin-bottom: 30px;
+}
+.mb56 {
+    margin-bottom: 56px;
+}
+.mb240 {
+    margin-bottom: 240px;
+}
+/*tf-header*/
+.tf-header {
+    width: 100%;
+    height: 96px;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background-color: #fdfdfd;
+}
+.tf-header.scroll {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .1);
+}
+.tf-header-block {
+    width: 100%;
+    height: 96px;
+}
+.tf-header-main {
+    height: 100%;
+    position: relative;
+    z-index: 101;
+}
+.tf-header-logo {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 96px;
+}
+.tf-header-logo .logo {
+    display: inline-block;
+    width: 209px;
+    height: 28px;
+    background-image: url('../image/common/logo@2x.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 209px auto;
+    vertical-align: middle;
+}
+.tf-header-nav {
+    list-style: none;
+    float: right;
+}
+.tf-header-nav li {
+    display: inline-block;
+    margin: 0 3px;
+    font-size: 0;
+    position: relative;
+}
+.tf-header-nav>li:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4px;
+    background: #1cab68;
+    transition: width 0.2s ease-in;
+}
+.tf-header-nav>li:hover::after {
+    width: 100%;
+}
+.tf-header-nav>.common-dropdown:hover::after {
+    width: 0;
+}
+.tf-header-nav li a {
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 76px;
+    position: relative;
+    display: block;
+    color: #888;
+    min-width: 104px;
+    text-align: center;
+}
+.tf-header-nav li a:hover,
+.tf-header-nav li a.lan,
+.tf-header-nav li a.active,
+.menu-news-main li:hover,
+.menu-news-main li.active {
+    color: #1cab68;
+}
+.tf-header-nav li a.lan {
+    font-weight: 500;
+}
+.tf-header-nav .triangle {
+    display: inline-block;
+    margin-left: 3px;
+    border-top: 4px solid #1cab68;
+    border-left: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: relative;
+}
+
+.pop-up-row {
+    position: absolute;
+    top: 62px;
+    left: 9px;
+    z-index: 101;
+    display: none;
+    width: 100px;
+    background-color: #fff;
+    border: 2px solid #74d3a7;
+}
+.menu-news-main {
+    width: 100%;
+    z-index: 101;
+    left: 0;
+    box-sizing: border-box;
+    /* padding: 11px 10px 11px 15px !important; */
+    display: inline-block;
+    vertical-align: top;
+}
+.menu-news-main  li {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    line-height: 38px;
+    cursor: pointer;
+    border-bottom: 2px solid #74d3a7;
+    margin: 0;
+    padding-left: 18px;
+}
+.menu-news-main  li:last-child {
+    border-bottom: none;
+}
+
+.common-dropdown.hover .triangle,
+.common-dropdown:hover .triangle {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid #1cab68;
+    top: -4px;
+}
+.common-dropdown.hover .pop-up-row,
+.common-dropdown:hover .pop-up-row,
+.pop-up-row.hover{
+    display: block;
+}
+
+.tf-button {
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: 1.2px;
+    padding: 18px 36px;
+    background-color: #1cab68;
+    display: inline-block;
+    cursor: pointer;
+}
+.tf-button:hover {
+    background-color: #168d55;
+}   
+
+/*tf-footer*/
+.tf-footer {
+    background-color: #1a2031;
+    font-size: 14px;
+    padding-top: 92px;
+    padding-bottom: 100px;
+}
+.tf-footer-left {
+    float: left;
+}
+.tf-footer-left .logo {
+    width: 209px;
+}
+.tf-footer-left .tf-footer-link {
+    margin-top: 40px;
+}
+.tf-footer-link a {
+    display: inline-block;
+    padding: 0 33px 0 0;
+    cursor: pointer;
+}
+.tf-footer-link a  img {
+    height: 16px;
+}
+.tf-copyright {
+    font-size: 14px;
+    line-height: 16px;
+    color: #4D616D;
+    margin-top: 87px;
+}
+.tf-footer-right {
+    float: right;
+}
+.tf-footer-right dl {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 170px;
+}
+.tf-footer-right dt {
+    font-size: 16px;
+    color: #fff;
+    line-height: 20px;
+    margin-bottom: 35px;
+}
+.tf-footer-right a {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+    display: block;
+    cursor: pointer;
+}
+.tf-footer-right a:hover {
+    color: #fff;
+}
+
+/*tf-backtop*/
+.tf-backtop {
+    position: fixed;
+    bottom: 100px;
+    right: 32px;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    line-height: 0;
+    display: block;
+    text-align: center;
+    color: #1cab68;
+    font-size: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all .3s;
+    overflow: hidden;
+    box-shadow: 0 6px 14px 0 rgba(0,0,0,.15);
+}
+.tf-backtop:hover {
+    background-color: #1cab68;
+    color: #fff;
+}
+.tf-backtop .tf-backtop-top-one {
+    margin: 10px auto;
+    display: block;
+}
+/*product-icon*/
+.product-icon {
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    background-image: url(../image/index/product-icon.png);
+    background-size: 165px 110px;
+    background-repeat: no-repeat;
+    margin-right: 80px;
+}
+.product-icon-1 {
+    background-position:  0 0;
+}
+.product-icon-2 {
+    background-position:  -110px 0;
+}
+.product-icon-3 {
+    background-position:  -55px -55px;
+}
+.product-icon-4 {
+    background-position:  -55px 0;
+}
+.product-icon-5 {
+    background-position:  0 -55px;
+}
