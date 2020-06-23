@@ -46,7 +46,11 @@
     padding: 20px 52px 0;
 }
 .tf-section2 .item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-7px);
+    -webkit-transform: translateY(-7px);
+    -moz-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    -o-transform: translateY(-7px);
 }
 .tf-section2 .item::after {
     content: '';

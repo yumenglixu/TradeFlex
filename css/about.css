@@ -1,0 +1,96 @@
+/*tf-section*/
+.tf-section-title {
+    font-size: 32px;
+    color: #333;
+    line-height: 44px;
+    text-align: center;
+}
+.tf-section-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tf-section-2 {
+    background-color: #f7f7f7;
+    padding: 53px 0;
+}
+.tf-section-2 .tf-section-title {
+    color: #C8C8C8;
+}
+.tf-section-2 .tf-section-agency-list {
+    height: 96px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.tf-section-2 .tf-section-agency-list img {
+    height: 96px;
+    display: inline-block;
+
+}
+
+.tf-section-success-list {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.tf-section-success-list .item {
+    width: 288px;
+    height: 300px;
+    box-shadow: 0 8px 17px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    position: relative;
+}
+.tf-section-success-list .item-img {
+    text-align: center;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tf-section-success-list .item-img img {
+    transition: all .3s ease-in-out;
+    transform:scale(0.5);
+    -webkit-transform:scale(0.5);
+    -moz-transform:scale(0.5);
+    -ms-transform:scale(0.5);
+    -o-transform:scale(0.5);
+}
+.tf-section-success-list .item:hover img {
+    transform: scale(0.53);
+    -webkit-transform: scale(0.53);
+    -moz-transform: scale(0.53);
+    -ms-transform: scale(0.53);
+    -o-transform: scale(0.53);
+}
+.tf-section-success-list .item .item-link {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background-color: #1cab68;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}
+.tf-section-success-list .item .item-link:hover {
+    background-color: #38a15b;
+}
+.tf-section-success-list .item:hover .item-link {
+    height: 72px;
+    line-height: 72px;
+}

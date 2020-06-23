@@ -7,7 +7,7 @@
     <title>TradeFlex-website</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/common.css?t=222">
     <link rel="stylesheet" href="./css/index.css?t=222">
 </head>
@@ -18,10 +18,10 @@
                 <a class="logo" href="/"></a>
             </div>
             <ul class="tf-header-nav">
-                <li><a class="nav active" href="https://www.kuchuan.com/" data-lan="navProducts"></a></li>
-                <li><a class="nav" href="https://www.kuchuan.com/" data-lan="navSolutions"></a></li>
-                <li><a class="nav" href="https://www.kuchuan.com/" data-lan="navContact"></a></li>
-                <li><a class="nav" href="https://www.kuchuan.com/" data-lan="navAboutUs"></a></li>
+                <li><a class="nav active" href="/" data-lan="navProducts"></a></li>
+                <li><a class="nav" href="./solutions.html" data-lan="navSolutions"></a></li>
+                <li><a class="nav" href="./contact.html" data-lan="navContact"></a></li>
+                <li><a class="nav" href="./about.html" data-lan="navAboutUs"></a></li>
                 <li class="common-dropdown">
                     <a class="lan" href="javascript:;">
                         <span class="lan-name"></span>
@@ -44,7 +44,7 @@
             <div class="tf-banner-left wow bounceInLeft">
                 <div class="h2" data-lan="bannerTitle"></div>
                 <div class="h4" data-lan="bannerSubTitle"></div>
-                <div class="tf-button" data-lan="bannerBtn"></div>
+                <a class="tf-button" data-lan="bannerBtn" href="./contact.html"></a>
             </div>
             <div class="tf-banner-right wow bounceInRight"></div>
         </div>
@@ -108,22 +108,22 @@
             <div class="tf-footer-right">
                 <dl>
                     <dt data-lan="navProducts"></dt>
-                    <a data-lan="productTitle1"></a>
-                    <a data-lan="productTitle2"></a>
-                    <a data-lan="productTitle3"></a>
-                    <a data-lan="productTitle4"></a>
-                    <a data-lan="productTitle5"></a>
+                    <a data-lan="productTitle1" href="./index.html#productItem0"></a>
+                    <a data-lan="productTitle2" href="./index.html#productItem1"></a>
+                    <a data-lan="productTitle3" href="./index.html#productItem2"></a>
+                    <a data-lan="productTitle4" href="./index.html#productItem3"></a>
+                    <a data-lan="productTitle5" href="./index.html#productItem4"></a>
                 </dl>
                 <dl>
                     <dt data-lan="navSolutions"></dt>
-                    <a data-lan="footerS1"></a>
-                    <a data-lan="footerS2"></a>
-                    <a data-lan="footerS3"></a>
+                    <a data-lan="footerS1" href="./solutions.html#section1"></a>
+                    <a data-lan="footerS2" href="./solutions.html#section2"></a>
+                    <a data-lan="footerS3" href="./solutions.html#section3"></a>
                 </dl>
                 <dl>
                     <dt data-lan="footerS4"></dt>
-                    <a data-lan="navAboutUs"></a>
-                    <a data-lan="navContact"></a>
+                    <a data-lan="navAboutUs" href="./about.html"></a>
+                    <a data-lan="navContact" href="./contact.html"></a>
                 </dl>
             </div>
         </div>
@@ -133,7 +133,7 @@
     </div>
     <script src="./js/jquery-1.11.2.min.js"></script>
     <script src="./js/jquery.cookie.js"></script>
-    <script src="https://cdn.dowebok.com/131/js/wow.min.js"></script>
+    <script src="./js/wow.min.js"></script>
     <script src="./js/lan.js?t=222"></script>
     <script src="./js/common.js?t=222"></script>
     <script>    
@@ -160,7 +160,7 @@
                                 '<div class="item-desc" data-lan="productItem'+(l + '' + k) +'.desc"></div>'+
                             '</div>';
                 };
-                var li = '<li class="wow fadeInUp" data-wow-delay="'+(0.1 * index)+'s">'+
+                var li = '<li class="wow fadeInUp" data-wow-delay="'+(0.1 * index)+'s" id="productItem'+index+'">'+
                             '<div class="product-info-item">'+
                                 '<div class="product-info-left">'+
                                     '<i class="product-icon product-icon-'+l+'"></i>'+

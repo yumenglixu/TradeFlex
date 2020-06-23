@@ -9,7 +9,7 @@
     <meta name="description" content="" />
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/common.css?t=333">
-    <link rel="stylesheet" href="./css/solutions.css?t=333">
+    <link rel="stylesheet" href="./css/contact.css?t=333">
 </head>
 <body>
     <!--顶部-->
@@ -20,8 +20,8 @@
             </div>
             <ul class="tf-header-nav">
                 <li><a class="nav" href="/" data-lan="navProducts"></a></li>
-                <li><a class="nav active" data-lan="navSolutions"></a></li>
-                <li><a class="nav" href="./contact.html" data-lan="navContact"></a></li>
+                <li><a class="nav" href="./solutions.html" data-lan="navSolutions"></a></li>
+                <li><a class="nav active" data-lan="navContact"></a></li>
                 <li><a class="nav" href="./about.html" data-lan="navAboutUs"></a></li>
                 <li class="common-dropdown">
                     <a class="lan" href="javascript:;">
@@ -40,67 +40,24 @@
         </div>
     </div>
     <div class="tf-header-block"></div>
-    <div class="tf-section1 wrapper wow fadeIn">
-        <div class="tf-section1-title" data-lan="solutionsTitle"></div>
-    </div>
-    <div class="tf-section2 wrapper">
-        <div class="item wow fadeInUpBig">
-            <i class="product-icon product-icon-1"></i>
-            <div class="h4" data-lan="solutionsItem1.title"></div>
-            <div class="desc" data-lan="solutionsItem1.desc"></div>
-        </div>
-        <div class="item wow fadeInUpBig" data-wow-delay="0.15s">
-            <i class="product-icon product-icon-4"></i>
-            <div class="h4" data-lan="solutionsItem2.title"></div>
-            <div class="desc" data-lan="solutionsItem2.desc"></div>
-        </div>
-        <div class="item wow fadeInUpBig" data-wow-delay="0.3s">
-            <i class="product-icon product-icon-5"></i>
-            <div class="h4" data-lan="solutionsItem3.title"></div>
-            <div class="desc" data-lan="solutionsItem3.desc"></div>
-        </div>
-    </div>
-    <div class="tf-section3 wrapper" id="section1">
-        <div class="tf-solutions-left wow bounceInLeft">
-            <div class="tf-solutions-title" data-lan="footerS1"></div>
-            <div class="tf-solutions-list">
-                <p class="solutions-item"><span>1.</span><span data-lan="solutionsInfo1.item1"></span></p>
-                <p class="solutions-item"><span>2.</span><span data-lan="solutionsInfo1.item2"></span></p>
-                <p class="solutions-item"><span>3.</span><span data-lan="solutionsInfo1.item3"></span></p>
-                <p class="solutions-item"><span>4.</span><span data-lan="solutionsInfo1.item4"></span></p>
-                <p class="solutions-item"><span>5.</span><span data-lan="solutionsInfo1.item5"></span></p>
-                <p class="solutions-item"><span>6.</span><span data-lan="solutionsInfo1.item6"></span></p>
+    
+    <div class="wrapper mt64 mb120 tf-section-contact">
+        <div class="tf-section-title mb30" data-lan="title3"></div>
+        <div class="tf-section-desc mb56" data-lan="desc3"></div>
+        <div class="tf-section-form">
+            <div class="tf-section-form-item form-name">
+                <input type="text" class="input-name" data-lan-placeholder="name">
             </div>
-        </div>
-        <div class="tf-solutions-right wow bounceInRight">
-            <img src="./image/solutions/online_storage.svg" alt="">
-        </div>
-    </div>
-    <div class="tf-section3 wrapper" id="section2">
-        <div class="tf-solutions-right wow bounceInLeft">
-            <img src="./image/solutions/ethereum.svg" alt="">
-        </div>
-        <div class="tf-solutions-left wow bounceInRight">
-            <div class="tf-solutions-title" data-lan="footerS2"></div>
-            <div class="tf-solutions-list">
-                <p class="solutions-item"><span>1.</span><span data-lan="solutionsInfo2.item1"></span></p>
-                <p class="solutions-item"><span>2.</span><span data-lan="solutionsInfo2.item2"></span></p>
-                <p class="solutions-item"><span>3.</span><span data-lan="solutionsInfo2.item3"></span></p>
+            <div class="tf-section-form-item form-email">
+                <input type="text" class="input-email" data-lan-placeholder="email">
             </div>
-        </div>
-    </div>
-    <div class="tf-section3 wrapper mb240" id="section3">
-        <div class="tf-solutions-left wow bounceInLeft">
-            <div class="tf-solutions-title" data-lan="footerS3"></div>
-            <div class="tf-solutions-list">
-                <p class="solutions-item"><span>1.</span><span data-lan="solutionsInfo3.item1"></span></p>
-                <p class="solutions-item"><span>2.</span><span data-lan="solutionsInfo3.item2"></span></p>
-                <p class="solutions-item"><span>3.</span><span data-lan="solutionsInfo3.item3"></span></p>
-                <p class="solutions-item"><span>3.</span><span data-lan="solutionsInfo3.item4"></span></p>
+            <div class="tf-section-form-item form-phone">
+                <input type="text" class="input-phone" data-lan-placeholder="phone">
             </div>
-        </div>
-        <div class="tf-solutions-right wow bounceInRight">
-            <img src="./image/solutions/online_protection.svg" alt="">
+            <div class="tf-section-form-item form-message">
+                <textarea type="text" rows="10" class="input-message" data-lan-placeholder="message"></textarea>
+            </div>
+            <div class="tf-button" id="send" data-lan="bannerSend"></div>
         </div>
     </div>
     <!--底部-->
@@ -145,14 +102,61 @@
     </div>
     <script src="./js/jquery-1.11.2.min.js"></script>
     <script src="./js/jquery.cookie.js"></script>
+    <script src="./js/layer/layer.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/lan.js?t=333"></script>
     <script src="./js/common.js?t=333"></script>
     <script>    
+        var phoneVaild = /^([1][3456789]\d{9}|[1][3456789]\d\*{4}\d{4})$/;
+        var emailVaild = /^([a-z0-9A-Z]+[-_|\.]*)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
+        var loading = null
         $(function () {
             new WOW().init();
             renderDom();
+
+            $('#send').on('click', function () {
+                var result = vaildInput();
+                if (result) {
+                    console.log(2222, result);
+                    setTimeout(function() {
+                        layer.close(loading);
+                        layer.msg('信息提交成功', {icon: 1});
+                    }, 1000);
+                }
+            })
         })
+        function vaildInput() {
+            let lan = window.globalLan;
+            var config = lanConfig[lan] || {};
+            var name = $.trim($('.input-name').val());
+            var email = $.trim($('.input-email').val());
+            var phone = $.trim($('.input-phone').val());
+            var message = $.trim($('.input-message').val()) || '';
+            $('.tf-section-form-item').removeClass('error')
+            $('.tf-error-msg').html('')
+            if (!name) {
+                layer.msg(config.errorNameMsg);
+                $('.form-name').addClass('error')
+                return false
+            }
+            else if (!email || !emailVaild.test(email)) {
+                layer.msg(config.errorEmailMsg);
+                $('.form-email').addClass('error')
+                return false
+            }
+            else if (!phone || phone.length !== 11 || !phoneVaild.test(phone)) {
+                layer.msg(config.errorPhoneMsg);
+                $('.form-phone').addClass('error')
+                return false
+            }
+            loading = layer.load();
+            return {
+                name,
+                email,
+                phone,
+                message
+            }
+        }
     </script>
 </body>
 </html>

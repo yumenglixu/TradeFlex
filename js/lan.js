@@ -16,6 +16,7 @@ var lanConfig = {
         title2: 'TradeFlex 平台优势',
         title3: '立即咨询',
         desc3: '了解开设交易所业务与相关运营全部信息，TradeFlex会保护您的隐私',
+        desc4: '全球领先的区块链技术服务商，TradeFlex目前主要提供现货交易系统、合约交易系统、OTC交易系统、钱包对接服务等区块链资产交易系统技术服务。可以支持合作伙伴快速开展自营交易平台业务，专注于业务发展，无需付出耗时且成本高昂的软件开发、采购和运维管理成本，实现快速高效启动交易所业务。针对客户需求可以深度定制化，给交易所用户带来极佳的交易体验。',
         productTitle1: '现货交易系统',
         productTitle2: '合约交易系统',
         productTitle3: 'OTC交易系统',
@@ -132,6 +133,8 @@ var lanConfig = {
         },
         name: '姓名',
         email: '邮箱',
+        phone: '电话',
+        message: '请输入您的信息',
         footerS1: '数字资产交易解决方案',
         footerS2: '流动性系统解决方案',
         footerS3: '钱包系统解决方案',
@@ -167,7 +170,12 @@ var lanConfig = {
             item2: '钱包私钥冷热分离，采用多种加密手段、操作权限分级等多层次多维度安全风控策略，确保资产绝对安全',
             item3: '根据行业积累经验，简化了繁琐的操作流程，实现高效管理数字资产',
             item4: '提供一体化解决方案，快速部署、标准化API接口快速接入、7*24小时客服支持，让企业用户专注于自身行业的运营与管理'
-        }
+        },
+        aboutTitle2: '投资机构',
+        aboutTitle3: '合作伙伴',
+        errorNameMsg: '请输入姓名',
+        errorEmailMsg: '请输入合法的邮箱地址',
+        errorPhoneMsg: '请输入合法的手机号码',
     },
     en: {
         navProducts: 'Products',

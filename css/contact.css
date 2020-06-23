@@ -1,0 +1,55 @@
+/*tf-section*/
+.tf-section-title {
+    font-size: 32px;
+    color: #333;
+    line-height: 44px;
+    text-align: center;
+}
+.tf-section-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+}
+.tf-section-form {
+    width: 630px;
+    margin: 0 auto;
+}
+.tf-section-form-item {
+    box-sizing: border-box;
+   
+    /* height: 48px; */
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 0;
+    vertical-align: top;
+    margin-bottom: 24px;
+}
+.tf-section-form-item.error {
+    border: 1px solid #f00;
+}
+.tf-section-form-item input,
+.tf-section-form-item textarea {
+    height: 100%;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    padding: 0;
+    vertical-align: top;
+    width: 100%;
+    line-height: 30px;
+    background-color: transparent;
+    resize: none;
+}
+.tf-section-form-item input {
+    line-height: 46px;
+}
+.tf-section-form .tf-button {
+    width: 180px;
+    padding: 18px 0;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}

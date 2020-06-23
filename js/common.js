@@ -1,6 +1,7 @@
 /**
  * 默认配置
  */
+window.globalLan = 'cn';
 ;(function ($) {
     $(function () {
         // 切换语言
@@ -38,6 +39,7 @@ function renderDom() {
     var lan =  $.cookie('tf-lan') || 'cn';
     // 存储缓存30天
     $.cookie('tf-lan', lan, { expires:  30});
+    window.globalLan = lan;
     // 从配置中读取语言列表
     var config = lanConfig[lan] || {};
     // 获取元素

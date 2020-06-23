@@ -145,6 +145,9 @@ body{
 .mb240 {
     margin-bottom: 240px;
 }
+.mb120 {
+    margin-bottom: 120px;
+}
 /*tf-header*/
 .tf-header {
     width: 100%;
@@ -294,9 +297,14 @@ body{
     cursor: pointer;
 }
 .tf-button:hover {
-    background-color: #168d55;
+    background-color: #38a15b;
 }   
-
+.tf-error-msg {
+    color: #f00;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+}
 /*tf-footer*/
 .tf-footer {
     background-color: #1a2031;
