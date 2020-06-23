@@ -17,7 +17,6 @@
 }
 .tf-section-form-item {
     box-sizing: border-box;
-   
     /* height: 48px; */
     border: 1px solid #ddd;
     padding: 10px;
@@ -43,7 +42,8 @@
     resize: none;
 }
 .tf-section-form-item input {
-    line-height: 46px;
+    line-height: 26px;
+    height: 26px;
 }
 .tf-section-form .tf-button {
     width: 180px;
