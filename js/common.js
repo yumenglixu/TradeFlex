@@ -40,10 +40,6 @@ function renderDom() {
     // 存储缓存30天
     $.cookie('tf-lan', lan, { expires:  30});
     window.globalLan = lan;
-    $('body').removeClass('cn')
-    $('body').removeClass('en')
-    $('body').removeClass('ko')
-    $('body').addClass(lan)
     // 从配置中读取语言列表
     var config = lanConfig[lan] || {};
     // 获取元素
@@ -51,12 +47,14 @@ function renderDom() {
     var lanLi = $('.menu-news-main li[lan='+lan+']');
     lanLi.addClass('active')
     $('.lan-name').html(lanLi.html());
+    // 所有文本替换
     allLan.each(function(i) {
         var lanText = $(this).data('lan').split('.')
         // 判断是否为数据
         var trueText = getTrueText(lanText, 0, config)
         $(this).html(trueText);
     });
+    // 所有placeholder 替换
     allLanPlace.each(function(i) {
         var lanText = $(this).data('lan-placeholder').split('.')
         // 判断是否为数据
@@ -64,7 +62,7 @@ function renderDom() {
         $(this).attr('placeholder', trueText);
     });
 }
-
+// 遍历获取最后的词汇
 function getTrueText(obj, index, params ) {
     if (obj.length === index + 1) {
         return params[obj[index]] || ''
@@ -74,7 +72,7 @@ function getTrueText(obj, index, params ) {
     return getTrueText(obj, index, params)
 }
 
-// 意见反馈
+// 加入我们
 function sendMessage(result, cb) {
     $.ajax({
         url: 'xxxxx',
