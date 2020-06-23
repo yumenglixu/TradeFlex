@@ -84,14 +84,15 @@
         <div class="tf-section-title mb30" data-lan="title3"></div>
         <div class="tf-section-desc mb56" data-lan="desc3"></div>
         <div class="tf-section-form">
-            <div class="tf-section-form-item">
-                <input type="text" data-lan-placeholder="name" style="width: 180px">
+            <div class="tf-section-form-item form-name">
+                <input type="text" data-lan-placeholder="name" class="input-name" style="width: 180px">
             </div>
-            <div class="tf-section-form-item">
-                <input type="text" data-lan-placeholder="email" style="width: 400px">
+            <div class="tf-section-form-item form-email">
+                <input type="text" data-lan-placeholder="email" class="input-email" style="width: 400px">
             </div>
-            <div class="tf-button" data-lan="bannerSend"></div>
+            <div class="tf-button" data-lan="bannerSend" id="send"></div>
         </div>
+        <p class="tf-error-msg"></p>
     </div>
     <div class="tf-footer">
         <div class="wrapper clearfix">
@@ -184,6 +185,36 @@
             })
             new WOW().init();
             renderDom();
+            $('#send').on('click', function () {
+                var result = vaildInput();
+                if (result) {
+                    sendMessage(result, function () {
+                        alert('success')
+                    })
+                }
+            })
+            function vaildInput() {
+                let lan = window.globalLan;
+                var config = lanConfig[lan] || {};
+                var name = $.trim($('.input-name').val());
+                var email = $.trim($('.input-email').val());
+                $('.tf-section-form-item').removeClass('error')
+                $('.tf-error-msg').html('')
+                if (!name) {
+                    $('.tf-error-msg').html(config.errorNameMsg);
+                    $('.form-name').addClass('error')
+                    return false
+                }
+                else if (!email || !emailVaild.test(email)) {
+                    $('.tf-error-msg').html(config.errorEmailMsg);
+                    $('.form-email').addClass('error')
+                    return false
+                }
+                return {
+                    name,
+                    email
+                }
+            }
         })
     </script>
 </body>

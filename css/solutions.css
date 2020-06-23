@@ -11,6 +11,10 @@
     padding-top: 150px;
     letter-spacing: 2px;
 }
+.tf-section1-title {
+    width: 650px;
+    margin: 0 auto;
+}
 .tf-section1::before,
 .tf-section1::after {
     content: '';
@@ -38,12 +42,12 @@
 }
 .tf-section2 .item {
     box-sizing: border-box;
-    height: 376px;
+    min-height: 376px;
     width: 376px;
     box-shadow: 0px 4px 24px 0px rgba(220, 220, 220, 0.45);
     transition: transform 0.2s ease-in;
     position: relative;
-    padding: 20px 52px 0;
+    padding: 20px 22px 20px 52px;
 }
 .tf-section2 .item:hover {
     transform: translateY(-7px);

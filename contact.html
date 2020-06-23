@@ -118,10 +118,12 @@
                 var result = vaildInput();
                 if (result) {
                     console.log(2222, result);
-                    setTimeout(function() {
-                        layer.close(loading);
-                        layer.msg('信息提交成功', {icon: 1});
-                    }, 1000);
+                    sendMessage(result, function () {
+                        setTimeout(function() {
+                            layer.close(loading);
+                            layer.msg('信息提交成功', {icon: 1});
+                        }, 500);
+                    })
                 }
             })
         })

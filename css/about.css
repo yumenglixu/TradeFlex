@@ -89,8 +89,6 @@
 }
 .tf-section-success-list .item .item-link:hover {
     background-color: #38a15b;
-}
-.tf-section-success-list .item:hover .item-link {
     height: 72px;
     line-height: 72px;
 }

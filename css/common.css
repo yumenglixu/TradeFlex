@@ -341,7 +341,11 @@ body{
 .tf-footer-right dl {
     display: inline-block;
     vertical-align: top;
-    min-width: 170px;
+    min-width: 150px;
+    margin-left: 20px;
+}
+.tf-footer-right dl:last-child {
+    min-width: auto;
 }
 .tf-footer-right dt {
     font-size: 16px;

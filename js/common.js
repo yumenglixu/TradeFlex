@@ -40,6 +40,10 @@ function renderDom() {
     // 存储缓存30天
     $.cookie('tf-lan', lan, { expires:  30});
     window.globalLan = lan;
+    $('body').removeClass('cn')
+    $('body').removeClass('en')
+    $('body').removeClass('ko')
+    $('body').addClass(lan)
     // 从配置中读取语言列表
     var config = lanConfig[lan] || {};
     // 获取元素
@@ -69,3 +73,20 @@ function getTrueText(obj, index, params ) {
     index++;
     return getTrueText(obj, index, params)
 }
+
+// 意见反馈
+function sendMessage(result, cb) {
+    $.ajax({
+        url: 'xxxxx',
+        type: 'post',
+        dataType: 'json',
+        data: result,
+        xhrFields:{
+            withCredentials: true
+        }
+    })
+    .done(function(res) {
+        console.log(res);
+        cb && cb(res)
+    })
+} 

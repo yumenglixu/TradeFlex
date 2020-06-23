@@ -78,6 +78,7 @@
     line-height: 1;
     font-size: 16px;
     margin-top: 16px;
+    line-height: 28px;
 }
 .product-info-right {
     position: absolute;
@@ -160,7 +161,7 @@
     color: #555;
     font-size: 14px;
     line-height: 22px;
-    height: 44px;
+    min-height: 44px;
     width: 300px;
 }
 
