@@ -241,7 +241,7 @@ body{
     position: relative;
 }
 
-.pop-up-row {
+/* .pop-up-row {
     position: absolute;
     top: 62px;
     left: 9px;
@@ -250,13 +250,47 @@ body{
     width: 100px;
     background-color: #fff;
     border: 2px solid #74d3a7;
+} */
+.pop-up-row {
+    position: absolute;
+    top: 62px;
+    left: 9px;
+    z-index: 101;
+    display: none;
+    width: 120px;
+    background-color: #fff;
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, .08);
+    border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    -ms-border-radius: 0 0 6px 6px;
+    -o-border-radius: 0 0 6px 6px;
+    animation-duration: .3s;
+    animation-name: pop-show-in-animation;
+}
+@keyframes pop-show-in-animation {
+    0% {
+        opacity: .2;
+        -webkit-transform: scale(.3);
+        transform: scale(.3);
+        -webkit-transform-origin: left top;
+        transform-origin: left top
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: left top;
+        transform-origin: left top
+    }
 }
 .menu-news-main {
     width: 100%;
     z-index: 101;
     left: 0;
     box-sizing: border-box;
-    /* padding: 11px 10px 11px 15px !important; */
+    padding: 11px 15px;
     display: inline-block;
     vertical-align: top;
 }
@@ -266,14 +300,35 @@ body{
     display: block;
     line-height: 38px;
     cursor: pointer;
-    border-bottom: 2px solid #74d3a7;
+    /* border-bottom: 2px solid #74d3a7; */
     margin: 0;
-    padding-left: 18px;
+    clear: both;
+    /* padding-left: 18px; */
 }
 .menu-news-main  li:last-child {
     border-bottom: none;
 }
-
+.menu-news-main li .tf-ls-flag {
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 6px;
+    float: left;
+    margin-top: 11px;
+}
+.menu-news-main li .tf-ls-flag-cn {
+    background-image: url('../image/common/cn.png');
+}
+.menu-news-main li .tf-ls-flag-en {
+    background-image: url('../image/common/en.png');
+}
+.menu-news-main li .tf-ls-flag-kr {
+    background-image: url('../image/common/kr.png');
+}
 .common-dropdown.hover .triangle,
 .common-dropdown:hover .triangle {
     border-top: 4px solid transparent;
@@ -284,6 +339,7 @@ body{
 .common-dropdown:hover .pop-up-row,
 .pop-up-row.hover{
     display: block;
+    
 }
 
 .tf-button {

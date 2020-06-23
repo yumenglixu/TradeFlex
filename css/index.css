@@ -4,7 +4,7 @@
 */
 .tf-banner {
     position: relative;
-    height: 580px;
+    height: 560px;
     display: flex;
     align-items: center;
     align-content: center;
@@ -34,6 +34,9 @@
 }
 
 /*tf-section*/
+#productItem {
+    padding-top: 20px;
+}
 .tf-section-title {
     font-size: 32px;
     color: #333;
@@ -67,6 +70,9 @@
     display: flex;
     align-items: center;
     align-content: center;
+}
+.product-info-desc {
+    max-width: 800px;
 }
 .product-info-desc .h2 {
     color: #333;
@@ -251,6 +257,7 @@
     outline: none;
     padding: 0;
     vertical-align: top;
+    background-color: transparent;
 }
 .tf-section-form .tf-button {
     width: 180px;
